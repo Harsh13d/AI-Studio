@@ -24,6 +24,7 @@ jobs:
         run: npm install
 
       - name: Lint backend
+        if: hashFiles('backend/package.json') != ''
         run: npm run lint:backend
 
       - name: Lint frontend
@@ -31,6 +32,7 @@ jobs:
         run: npm run lint:frontend
 
       - name: Backend tests
+        if: hashFiles('backend/package.json') != ''
         run: npm run test:backend
 
       - name: Frontend tests
