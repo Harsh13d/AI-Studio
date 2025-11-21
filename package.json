@@ -1,0 +1,31 @@
+{
+  "name": "assignment_modelia",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Modelia AI Studio full-stack assignment",
+  "workspaces": [
+    "backend",
+    "frontend"
+  ],
+  "scripts": {
+    "dev:backend": "npm --workspace backend run dev",
+    "dev:frontend": "npm --workspace frontend run dev",
+    "test": "npm run test:backend && npm run test:frontend && npm run test:e2e",
+    "test:backend": "npm --workspace backend run test",
+    "test:frontend": "npm --workspace frontend run test",
+    "test:e2e": "npx playwright test --project=chromium",
+    "lint": "npm run lint:backend && npm run lint:frontend",
+    "lint:backend": "npm --workspace backend run lint",
+    "lint:frontend": "npm --workspace frontend run lint"
+  },
+  "keywords": [
+    "modelia",
+    "ai-studio",
+    "assignment"
+  ],
+  "author": "Dev Harsh",
+  "license": "MIT",
+  "devDependencies": {
+    "@playwright/test": "^1.56.1"
+  }
+}
