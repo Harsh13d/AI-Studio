@@ -11,7 +11,7 @@
     "format": "prettier --write \"src/**/*.ts\" \"tests/**/*.ts\"",
     "prisma:generate": "prisma generate",
     "prisma:migrate": "prisma migrate deploy",
-    "test": "cross-env DATABASE_URL=\"file:./test.db\" NODE_ENV=test prisma migrate deploy && cross-env DATABASE_URL=\"file:./test.db\" NODE_ENV=test jest --runInBand",
+    "test": "cross-env DATABASE_URL=\"file:./test.db\" NODE_ENV=test prisma generate && cross-env DATABASE_URL=\"file:./test.db\" NODE_ENV=test prisma migrate deploy && cross-env DATABASE_URL=\"file:./test.db\" NODE_ENV=test jest --runInBand",
     "test:watch": "cross-env DATABASE_URL=\"file:./test.db\" NODE_ENV=test jest --watch"
   },
   "keywords": [],
