@@ -23,19 +23,26 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      - name: Lint
-        run: npm run lint
+      - name: Lint backend
+        run: npm run lint:backend
+
+      - name: Lint frontend
+        if: hashFiles('frontend/package.json') != ''
+        run: npm run lint:frontend
 
       - name: Backend tests
         run: npm run test:backend
 
       - name: Frontend tests
+        if: hashFiles('frontend/package.json') != ''
         run: npm run test:frontend
 
       - name: Install Playwright browsers
+        if: hashFiles('playwright.config.ts') != ''
         run: npx playwright install --with-deps chromium
 
       - name: E2E tests
+        if: hashFiles('playwright.config.ts') != ''
         run: npm run test:e2e
 
       - name: Upload coverage artifacts
