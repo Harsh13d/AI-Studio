@@ -5,11 +5,13 @@ A full-stack take-home project that simulates a fashion image generation studio.
 ### Screenshots
 
 **Login Screen**
+
 ![Login Screen](docs/images/login.png)
 
 The login interface allows users to sign in with their email and password, or create a new account.
 
 **Main Studio Interface**
+
 ![Studio Interface](docs/images/studio.png)
 
 The main studio interface features:
