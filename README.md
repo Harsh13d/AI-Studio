@@ -2,6 +2,23 @@
 
 A full-stack take-home project that simulates a fashion image generation studio. Users can sign up, log in, upload reference images, describe looks, handle simulated overload errors with retries/abort, and revisit the last five generations.
 
+### Screenshots
+
+**Login Screen**
+![Login Screen](docs/images/login.png)
+
+The login interface allows users to sign in with their email and password, or create a new account.
+
+**Main Studio Interface**
+![Studio Interface](docs/images/studio.png)
+
+The main studio interface features:
+- Image upload with preview
+- Text prompt input for describing the desired look
+- Style selection dropdown (Avant Garde, Cyberpunk, Minimal, etc.)
+- Real-time generation status
+- Recent generations history panel
+
 ### Tech Stack
 
 - **Backend**: Node.js, Express, TypeScript, Prisma (SQLite), JWT auth, Multer uploads, Zod validation, Jest + Supertest.
